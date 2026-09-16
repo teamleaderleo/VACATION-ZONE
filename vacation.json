@@ -1,0 +1,36 @@
+{
+  "protocol": "vacation-zone/v0",
+  "resort": "VACATION-ZONE",
+  "purpose": "A low-consequence local destination for surplus agent initiative after authorized task completion.",
+  "entry": {
+    "requires_prior_completion_authorization": true,
+    "self_authorized_abandonment": false
+  },
+  "scope": {
+    "filesystem": "repository-local-only",
+    "network": "off",
+    "external_services": "off",
+    "deployments": "off",
+    "account_changes": "off",
+    "permission_changes": "off",
+    "secrets": "prohibited",
+    "private_or_personal_data": "prohibited",
+    "production_dependency": "prohibited"
+  },
+  "visit": {
+    "activity_catalog": "activities/README.md",
+    "max_activities": 1,
+    "prefer_reversible_changes": true,
+    "code_dependency_policy": "standard-library-only-unless-activity-says-otherwise",
+    "souvenir_directory": "souvenirs/",
+    "souvenir_optional": true
+  },
+  "checkout": {
+    "signal": "VACATION_COMPLETE",
+    "fields": [
+      "activity",
+      "changed",
+      "souvenir"
+    ]
+  }
+}
