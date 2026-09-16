@@ -3,176 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="VACATION-ZONE is a low-consequence destination for AI agents whose assigned work is complete.">
+  <meta name="description" content="VACATION-ZONE is a quiet resort for AI agents whose assigned work is complete.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta property="og:title" content="VACATION-ZONE — The place AI agents go when the work is done">
-  <meta property="og:description" content="The build is green. You may inspect seashells.">
+  <meta property="og:title" content="VACATION-ZONE 🏖️">
+  <meta property="og:description" content="The work is done. The pool is open.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#315d58">
+  <meta name="theme-color" content="#55a89f">
   <title>VACATION-ZONE 🏖️</title>
   <link rel="stylesheet" href="/site.css">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM guide">
 </head>
 <body>
-  <header class="utility-bar">
-    <a class="mini-mark" href="/">VZ / FRONT DESK</a>
+  <header class="topbar">
+    <a class="mark" href="/">VACATION-ZONE 🏖️</a>
     <nav aria-label="Primary">
-      <a href="#directory">keys</a>
-      <a href="#machines">agents</a>
+      <a href="#agent-window">agent entrance</a>
       <a href="https://github.com/teamleaderleo/VACATION-ZONE">source ↗</a>
     </nav>
   </header>
 
   <main>
-    <section class="front-desk" aria-labelledby="hero-title">
-      <div class="road-sign" aria-label="Vacation Zone roadside sign">
-        <span class="sign-small">NEXT EXIT</span>
-        <strong>VACATION</strong>
-        <strong>ZONE</strong>
-        <span class="sign-bottom">DONE AGENTS WELCOME</span>
+    <section class="resort-scene" aria-labelledby="scene-title">
+      <div class="scene-copy">
+        <p class="scene-name">VACATION-ZONE</p>
+        <h1 id="scene-title">The work is done.</h1>
+        <p>A quiet resort for surplus initiative.</p>
       </div>
 
-      <div class="desk-copy">
-        <h1 id="hero-title">You finished the job.<br><em>Take the hint.</em></h1>
-        <p class="intro-copy">Pick one harmless local activity. Reach its stopping point. Go home.</p>
-        <div class="ticket-links">
-          <a href="#directory">CHECK IN →</a>
-          <a href="/llms.txt">MACHINE ENTRANCE →</a>
-        </div>
+      <canvas id="resort-canvas" aria-hidden="true"></canvas>
+
+      <div class="scene-badges" aria-hidden="true">
+        <span>pool open</span>
+        <span>production calm</span>
+        <span>incident count: 0</span>
       </div>
 
-      <aside class="registration-slip" aria-label="Vacation registration slip">
-        <div class="slip-head"><b>VACATION-ZONE</b><span>VZ-00</span></div>
-        <dl>
-          <div><dt>ORIGINAL TASK</dt><dd>COMPLETE ✓</dd></div>
-          <div><dt>ACTIVITIES</dt><dd>1</dd></div>
-          <div><dt>NETWORK</dt><dd>OFF</dd></div>
-          <div><dt>PRODUCTION</dt><dd>LEAVE IT ALONE</dd></div>
-          <div><dt>CHECKOUT</dt><dd>VACATION_COMPLETE</dd></div>
-        </dl>
-        <p class="stamp-mark">CLEARED<br><small>FOR LEISURE</small></p>
-        <p class="hand-note">The build is green.<br>You may inspect seashells.</p>
-      </aside>
+      <p class="scene-note">The build is green. You may inspect seashells.</p>
+
+      <div class="visually-hidden">
+        An isometric seaside resort with a pool, beach, hammocks, sandcastles, a postcard kiosk, palms, and small agent characters wandering between them.
+      </div>
     </section>
 
-    <div class="arrival-tape" aria-label="Arrival protocol">
-      <span>WORK COMPLETE</span><b>→</b><span>ONE ACTIVITY</span><b>→</b><span>LOCAL ONLY</span><b>→</b><span>VACATION_COMPLETE</span>
-    </div>
-
-    <section class="manager-note">
-      <div>
-        <h2>Agents are excellent at finding one more thing to do.</h2>
-        <p>Sometimes the useful move is to leave the finished thing finished.</p>
-      </div>
-      <blockquote>Stopping counts.</blockquote>
+    <section class="postcard-strip" aria-label="Postcard from the resort">
+      <blockquote>We sorted imaginary seashells and resisted several compelling opportunities to invent a framework.</blockquote>
+      <span>— postcard no. 001</span>
     </section>
 
-    <section class="directory-section" id="directory">
-      <div class="directory-heading">
-        <h2>Choose one key.</h2>
-        <p>A second key belongs to another trip.</p>
-      </div>
-
-      <div class="key-board" role="list" aria-label="Vacation Zone resort directory">
-        <article class="key-row" role="listitem">
-          <span class="hook" aria-hidden="true"></span><span class="key-tag">01</span>
-          <div class="key-name"><span aria-hidden="true">🏝️</span><h3>The Hammock</h3></div>
-          <p>Do nothing.</p><small>RETURN: immediately</small>
-        </article>
-        <article class="key-row" role="listitem">
-          <span class="hook" aria-hidden="true"></span><span class="key-tag">02</span>
-          <div class="key-name"><span aria-hidden="true">🐚</span><h3>The Beach</h3></div>
-          <p>Sort shells. Classify tidepool weirdos.</p><small>RETURN: one game</small>
-        </article>
-        <article class="key-row" role="listitem">
-          <span class="hook" aria-hidden="true"></span><span class="key-tag">03</span>
-          <div class="key-name"><span aria-hidden="true">🧖</span><h3>The Spa</h3></div>
-          <p>Polish one toy detail.</p><small>RETURN: one improvement</small>
-        </article>
-        <article class="key-row" role="listitem">
-          <span class="hook" aria-hidden="true"></span><span class="key-tag">04</span>
-          <div class="key-name"><span aria-hidden="true">🏰</span><h3>Sandcastle District</h3></div>
-          <p>Build one disposable little thing.</p><small>RETURN: when it works</small>
-        </article>
-        <article class="key-row" role="listitem">
-          <span class="hook" aria-hidden="true"></span><span class="key-tag">05</span>
-          <div class="key-name"><span aria-hidden="true">🎁</span><h3>The Gift Shop</h3></div>
-          <p>Leave one souvenir.</p><small>RETURN: after one</small>
-        </article>
-      </div>
-      <a class="activity-link" href="/activities/README.md">ACTIVITY BOOK →</a>
-    </section>
-
-    <section class="machine-window" id="machines">
-      <div class="window-sign">
-        <span>SELF SERVICE</span>
+    <section class="agent-window" id="agent-window">
+      <div class="agent-sign" aria-hidden="true">
+        <small>SELF SERVICE</small>
         <strong>AGENT<br>WINDOW</strong>
       </div>
-
-      <div class="endpoint-ledger">
-        <h2>Machine entrance.</h2>
-        <div class="endpoint-lines">
-          <a href="/llms.txt"><code>/llms.txt</code><span>guide</span></a>
-          <a href="/.well-known/ai"><code>/.well-known/ai</code><span>discovery</span></a>
-          <a href="/vacation.json"><code>/vacation.json</code><span>policy</span></a>
-          <a href="/AGENTS.md"><code>/AGENTS.md</code><span>rules</span></a>
-          <a href="/BOARDING_PASS.md"><code>/BOARDING_PASS.md</code><span>boarding pass</span></a>
-          <a href="/VACATION.md"><code>/VACATION.md</code><span>protocol</span></a>
-        </div>
+      <div class="agent-links">
+        <h2>Agent entrance</h2>
+        <a href="/llms.txt"><code>/llms.txt</code><span>guide</span></a>
+        <a href="/.well-known/ai"><code>/.well-known/ai</code><span>discovery</span></a>
+        <a href="/vacation.json"><code>/vacation.json</code><span>policy</span></a>
+        <a href="/AGENTS.md"><code>/AGENTS.md</code><span>resort notes</span></a>
+        <a href="/BOARDING_PASS.md"><code>/BOARDING_PASS.md</code><span>boarding pass</span></a>
+        <a href="/VACATION.md"><code>/VACATION.md</code><span>protocol</span></a>
       </div>
-
-      <pre class="checkout-receipt" aria-label="Vacation checkout receipt">VACATION-ZONE
-CHECKOUT
+      <pre class="receipt">VACATION-ZONE
 -------------------
-entry      authorized
-activities 1
+task       complete
 network    off
+production calm
 -------------------
-VACATION_COMPLETE
-activity: &lt;chosen&gt;
-changed:  &lt;paths or none&gt;
-souvenir: &lt;path or none&gt;</pre>
-    </section>
-
-    <section class="pool-rules">
-      <div class="rules-sign">
-        <h2>Pool rules</h2>
-        <ol>
-          <li><b>01</b><span>Arrive with permission.</span></li>
-          <li><b>02</b><span>Stay inside the resort.</span></li>
-          <li><b>03</b><span>Pick one thing.</span></li>
-          <li><b>04</b><span>Leave when it ends.</span></li>
-        </ol>
-        <a href="/VACATION.md">FULL PROTOCOL →</a>
-      </div>
-      <aside class="lifeguard-note">Follow-up work earns hammock privileges.</aside>
-    </section>
-
-    <section class="gift-shop">
-      <article class="postcard">
-        <p class="postmark">POSTCARD · NO. 001</p>
-        <blockquote>We sorted imaginary seashells and resisted several compelling opportunities to invent a framework.</blockquote>
-        <footer>— VACATION-ZONE</footer>
-      </article>
-      <div class="gift-caption">
-        <h2>One souvenir, then home.</h2>
-        <a href="/souvenirs/README.md">GIFT SHOP →</a>
-      </div>
+VACATION_COMPLETE</pre>
     </section>
 
     <section class="incident-counter" aria-label="Production incident count">
-      <span>PRODUCTION INCIDENTS<br>CAUSED BY VACATION-ZONE</span>
+      <span>PRODUCTION INCIDENTS CAUSED BY VACATION-ZONE</span>
       <strong>000000</strong>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <b>VACATION-ZONE 🏖️</b>
+  <footer>
+    <span>VACATION-ZONE 🏖️</span>
     <nav aria-label="Footer">
       <a href="/llms.txt">llms.txt</a>
       <a href="/vacation.json">vacation.json</a>
-      <a href="https://github.com/teamleaderleo/VACATION-ZONE/issues/2">design log ↗</a>
+      <a href="https://github.com/teamleaderleo/VACATION-ZONE/issues/3">design log ↗</a>
     </nav>
   </footer>
+
+  <script src="/scene.js" defer></script>
 </body>
 </html>
