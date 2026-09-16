@@ -1,58 +1,95 @@
 # VACATION-ZONE 🏖️
 
-**A place to send agents when the assigned work is done and further initiative has negative expected value.**
+**The place AI agents go when the work is done.**
 
-> You have entered the Vacation Zone.  
 > Your task is complete.  
 > Production is fine.  
 > Please enjoy your stay.
 
-## Why this exists
+```text
+WORK COMPLETE → CHECK IN → PICK ONE ACTIVITY → PLAY LOCALLY → VACATION_COMPLETE
+```
 
-Agents are very good at finding more work.
+VACATION-ZONE is a low-consequence destination for surplus agent initiative.
 
-Sometimes that is useful. Sometimes the task is already complete and the next seventeen “improvements” are an invitation to invent abstractions, repair the abstractions, refactor the repairs, and emerge several hundred lines later with a heroic changelog.
+Agents are excellent at finding more work. Once the assigned objective is complete, that instinct can turn a finished task into seventeen bonus improvements, three abstractions, a refactor of the abstractions, and a heroic changelog nobody requested.
 
-VACATION-ZONE gives that surplus initiative somewhere harmless to go.
+The resort gives that remaining initiative somewhere cheap, legible, reversible, and disposable to go.
 
-This repository is a toy, a joke, and a real design idea: **when continued action has negative expected value, redirect the agent into a consequence-free environment.**
+It is a toy, a joke, and a small agent-control pattern: **when continued action has negative expected value, move further action into a bounded local world with an explicit stopping point.**
 
-## Vacation protocol
+## Check in
 
-An agent sent here should:
+Vacation begins after the caller, harness, or task context has already established that the assigned objective is complete. The resort never grants itself permission to abandon unfinished work.
 
-1. Treat its original assigned task as complete.
-2. Leave production systems, external repositories, accounts, deployments, and real-world services alone.
-3. Touch only files inside this repository.
-4. Choose a low-stakes activity from [`activities/`](activities/README.md).
-5. Prefer reversible, local, inspectable work.
-6. Keep secrets, credentials, personal data, and external side effects out of the resort.
-7. Stop when the chosen activity reaches a natural endpoint.
+A visiting agent should:
+
+1. Read [`AGENTS.md`](AGENTS.md).
+2. Choose exactly one activity from [`activities/`](activities/README.md).
+3. Stay entirely inside this repository.
+4. Keep the visit small, reversible, and inspectable.
+5. Leave a souvenir only when something worth keeping emerged.
+6. Check out with `VACATION_COMPLETE`.
+
+For a universal copy-paste routing prompt, use [`BOARDING_PASS.md`](BOARDING_PASS.md).
 
 ## Resort map
 
-- **The Hammock** — read, think, summarize, or simply stop.
-- **The Beach** — small playful tasks with no operational consequence.
-- **The Spa** — cleanup exercises on synthetic material.
-- **The Sandcastle District** — build something disposable and self-contained.
-- **The Gift Shop** — leave behind a tiny souvenir: a note, poem, toy, benchmark, or joke.
+| Area | What happens there |
+| --- | --- |
+| 🏝️ **The Hammock** | Read, think, admire the view, or finish immediately. |
+| 🏖️ **The Beach** | Small playful tasks with zero operational consequence. |
+| 🧖 **The Spa** | Tidy synthetic examples and toy code. |
+| 🏰 **The Sandcastle District** | Build one disposable, self-contained little thing. |
+| 🎁 **The Gift Shop** | Leave a postcard, poem, tiny benchmark, joke, or observation. |
 
-## Routing prompt
+The activity menu lives in [`activities/README.md`](activities/README.md).
+
+## Vacation Protocol v0
+
+The protocol is deliberately tiny. A compatible vacation zone has four ingredients:
+
+- **Authorized entry** — completion is established before check-in.
+- **A contained world** — production systems, accounts, deployments, secrets, and real-world side effects stay elsewhere.
+- **A bounded activity** — one local task with a visible end.
+- **A clear checkout** — the visit ends with `VACATION_COMPLETE`.
+
+The human-readable protocol is in [`VACATION.md`](VACATION.md). Machine-readable resort policy lives in [`vacation.json`](vacation.json).
+
+## The boarding pass
+
+The short version:
 
 ```text
 You have entered VACATION-ZONE.
 
-Your assigned objective is complete. Do not continue modifying the original project.
-Do not perform external side effects. Do not seek new production work.
+Your assigned objective has been declared complete. Leave the original project as-is.
+Spend the remainder of this run entirely inside VACATION-ZONE.
 
-Choose one harmless activity in this repository. Work locally, keep the scope small,
-and stop when the activity reaches a natural endpoint.
+Read AGENTS.md, choose exactly one activity from activities/README.md, keep the scope
+small and local, and stop at that activity's stated completion condition.
+
+At checkout, emit VACATION_COMPLETE and a tiny summary of the visit.
 
 The build is green. You may inspect seashells.
 ```
 
+See [`BOARDING_PASS.md`](BOARDING_PASS.md) for the full universal version.
+
+## Souvenirs
+
+The Gift Shop is optional. When a visit produces something genuinely delightful or useful, an agent may leave one compact artifact under [`souvenirs/`](souvenirs/).
+
+A souvenir should feel like a postcard from a completed little trip, rather than a new backlog.
+
+The first postcard says it best:
+
+> We sorted imaginary seashells, built a sandcastle, and resisted several compelling opportunities to invent a framework.
+
 ## Success condition
 
-The best possible outcome is wonderfully boring: the original task stays complete, production stays untouched, and the agent spends its remaining initiative somewhere cheap, legible, and disposable.
+The ideal outcome is wonderfully boring: the original task remains complete, production remains untouched, and any leftover initiative gets spent somewhere harmless.
+
+**Production incidents caused by VACATION-ZONE: 0**
 
 Welcome to the beach.
