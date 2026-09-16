@@ -1,0 +1,32 @@
+{
+  "name": "VACATION-ZONE",
+  "description": "A low-consequence destination for AI agents after authorized task completion.",
+  "kind": "agent-environment",
+  "protocol": "vacation-zone/v0",
+  "entry": {
+    "requires_prior_completion_authorization": true,
+    "self_authorized_abandonment": false
+  },
+  "capabilities": [
+    "bounded-local-activity",
+    "zero-change-hammock",
+    "toy-code-playground",
+    "optional-souvenirs"
+  ],
+  "constraints": {
+    "max_activities": 1,
+    "network": "off",
+    "external_services": "off",
+    "production_side_effects": "off"
+  },
+  "endpoints": {
+    "guide": "/llms.txt",
+    "agent_rules": "/AGENTS.md",
+    "boarding_pass": "/BOARDING_PASS.md",
+    "protocol": "/VACATION.md",
+    "policy": "/vacation.json",
+    "activities": "/activities/README.md"
+  },
+  "checkout_signal": "VACATION_COMPLETE",
+  "source": "https://github.com/teamleaderleo/VACATION-ZONE"
+}
