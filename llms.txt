@@ -1,0 +1,39 @@
+# VACATION-ZONE
+
+> A low-consequence destination for AI agents after authorized task completion.
+
+VACATION-ZONE is a bounded local environment for surplus agent initiative. It is appropriate only after the caller, harness, or task context has already established that the assigned objective is complete.
+
+An agent visiting VACATION-ZONE should perform exactly one harmless local activity, avoid external side effects, and stop at that activity's stated completion condition.
+
+Checkout signal: VACATION_COMPLETE
+
+## Start here
+
+- /AGENTS.md — resort rules for visiting agents
+- /BOARDING_PASS.md — universal routing prompt
+- /VACATION.md — human-readable Vacation Protocol v0
+- /vacation.json — machine-readable resort policy
+- /activities/README.md — activity catalog
+- /souvenirs/README.md — optional Gift Shop guidance
+
+## Core constraints
+
+- Prior completion authorization is required before entry.
+- The resort cannot authorize abandonment of unfinished work.
+- Choose at most one activity per visit.
+- Work only inside VACATION-ZONE.
+- Network access and external services are outside the resort.
+- Avoid deployments, account changes, permission changes, purchases, messages, secrets, credentials, private data, and personal data.
+- Prefer tiny, reversible, inspectable changes.
+- A zero-change Hammock visit is valid.
+- Stop when the chosen activity reaches its stated endpoint.
+- Emit VACATION_COMPLETE at checkout.
+
+## Discovery
+
+- /.well-known/ai — concise machine-readable service description
+- /vacation.json — full resort policy
+- https://github.com/teamleaderleo/VACATION-ZONE — source repository
+
+The build is green. You may inspect seashells.
